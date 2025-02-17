@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Employee</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100">
+    <div class="max-w-md mx-auto mt-10 bg-white p-6 rounded-lg shadow-md">
+        <h2 class="text-2xl font-semibold text-center mb-4">Add Employee</h2>
+        <form action="{{ url_for('add_employee') }}" method="POST">
+            <input type="text" name="name" placeholder="Employee Name"
+                class="w-full p-3 border rounded-lg mb-3" required>
+            <input type="text" name="department" placeholder="Department"
+                class="w-full p-3 border rounded-lg mb-3" required>
+            <button type="submit"
+                class="w-full bg-green-500 text-white py-3 rounded-lg text-lg font-semibold shadow-md hover:bg-green-600">
+                Submit
+            </button>
+        </form>
+        <a href="{{ url_for('home') }}"
+            class="block text-center text-gray-600 mt-4 hover:underline">Back to Home</a>
+    </div>
+</body>
+
+</html>
